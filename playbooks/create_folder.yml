@@ -1,0 +1,10 @@
+---
+- name: Create folder on Windows
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Create folder
+      ansible.windows.win_file:
+        path: C:\Temp\FromAnsible
+        state: directory
