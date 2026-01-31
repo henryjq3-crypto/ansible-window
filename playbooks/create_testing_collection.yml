@@ -1,6 +1,10 @@
 ---
-- name: Test Hub collection role
+- name: Create folder via collection role
   hosts: all
   gather_facts: no
+
+  collections:
+    - henryorg.win_folder
+
   roles:
-    - henryorg.win_folder.create_folder
+    - create_folder
