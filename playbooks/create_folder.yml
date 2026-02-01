@@ -3,6 +3,9 @@
   hosts: all
   gather_facts: no
 
+  collections:
+    - henryorg.win_folder
+
   tasks:
     - name: Create folder
       ansible.windows.win_file:
