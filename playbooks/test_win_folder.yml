@@ -1,0 +1,9 @@
+---
+- name: Test win_folder collection role
+  hosts: windows
+  gather_facts: no
+
+  roles:
+    - role: henryorg.win_folder.create_folder
+      vars:
+        folder_path: 'C:\temp\from_collection'
